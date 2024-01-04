@@ -33,22 +33,22 @@ public class MontyHall {
 		swapChoice=getAnAnswer(kb);
 		
 		if (swapChoice){
-						usersSwappedDoor=findNumberException(usersChosenDoor,doorToReveal);
-						usersChosenDoor=0;
-					   }
+				usersSwappedDoor=findNumberException(usersChosenDoor,doorToReveal);
+				usersChosenDoor=0;
+			       }
 		if  (usersSwappedDoor==prizeDoor||usersChosenDoor==prizeDoor) {
 				System.out.println("Congrats you won a brand new car");
 				if (usersSwappedDoor == prizeDoor) {
 			        switchWins++;
-			    								   } 
+			    					   } 
 				else
-					if(usersChosenDoor == prizeDoor) {
+				if(usersChosenDoor == prizeDoor) {
 			        stayWins++;
-													 }
-			    													  }													  
+								 }
+			    			 			      }													  
 		else {
-				System.out.println("Im sorry you chose wrong but atleast you get to keep the goat.");	
-			 }
+			System.out.println("Im sorry you chose wrong but atleast you get to keep the goat.");	
+		     }
 		
 		 
 		double switchWinPercentage = (double) switchWins / totalTrials * 100;
@@ -69,7 +69,7 @@ public class MontyHall {
 		while((!(user>0))&&(!(user<=3))) {
 			System.out.println("**Choose a number between 1 and 3**");
 			  user=kb.nextInt();
-										   }
+						 }
 		return user;
 	}
 	
@@ -78,8 +78,8 @@ public class MontyHall {
 		for(int findANumber=1;findANumber<=3;findANumber++) {
 			if((findANumber!=notThisOne)&&(findANumber!=notThisTwo)) {
 			    foundANumber = findANumber;
-			  												 	 	 }
-										  					}
+			  							 }
+								    }
 		return foundANumber;
 	}
 	
